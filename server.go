@@ -1,5 +1,4 @@
 package main
-
 import (
 	"fmt"
     "net/http"
@@ -11,13 +10,11 @@ func main() {
 		http.ServeFile(w, r, "pomidor.html")
 	})
 
-	/*// Обработчик для CSS файлов
+	// Обработчик для CSS файлов
 	http.HandleFunc("/styles.css", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "styles.css")
-	})*/
+	})
 
 	fmt.Println("Server is listening...")
 	http.ListenAndServe(":8282", nil)
 }
-
-
